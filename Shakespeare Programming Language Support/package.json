@@ -1,0 +1,25 @@
+{
+  "name": "spls",
+  "displayName": "Shakespeare Programming Language Support",
+  "description": "SPLS (Shakespeare Programming Language Support) for Visual Studio Code brings the whimsy of the Bard to your IDE. With syntax highlighting and intelligent editing for SPL, it turns your coding into a literary masterpiece.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "shakespeare",
+      "aliases": [" Shakespeare Programming Language", "shakespeare"],
+      "extensions": [".shakespeare",".spl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "shakespeare",
+      "scopeName": "source.shakespeare",
+      "path": "./syntaxes/shakespeare.tmLanguage.json"
+    }]
+  }
+}
