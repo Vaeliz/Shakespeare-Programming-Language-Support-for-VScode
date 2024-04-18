@@ -1,19 +1,25 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": " Shakespeare Programming Language",
+	"name": "Shakespeare Programming Language",
 	"patterns": [
 		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#characters"
+		},
+		{
+			"include": "#titles"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.shakespeare",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(Enter|Exit|Exeunt|Act|Scene)\\b"
 			}]
 		},
 		"strings": {
@@ -26,6 +32,18 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"characters": {
+			"patterns": [{
+				"name": "variable.other.character.shakespeare",
+				"match": "\\b(Romeo|Juliet|Hamlet|Othello|Macbeth|Desdemona|Iago|King Lear|Cordelia|Prospero|Ariel|Antonio|Portia|Bassanio|Shylock|Titania|Oberon|Puck|Bottom|Lysander|Demetrius|Hermia|Helena|Brutus|Caesar|Cleopatra|Mark Antony|Octavius|Cassius)\\b"
+			}]
+		},
+		"titles": {
+			"patterns": [{
+				"name": "entity.name.function.shakespeare",
+				"match": "\\b(Act I|Act II|Act III|Act IV|Act V|Scene I|Scene II|Scene III|Scene IV|Scene V)\\b"
+			}]
 		}
 	},
 	"scopeName": "source.shakespeare"
